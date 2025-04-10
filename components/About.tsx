@@ -102,10 +102,10 @@ const About = () => {
               I go by <span className="font-semibold">Jatique</span> (/jatik/) — that&apos;s the name I love to be called.
             </p>
             <p className="text-gray-300 mb-2 md:mb-3 text-xs md:text-sm lg:text-base">
-              I&apos;m a passionate and enthusiastic <span className="font-semibold">Fullstack Web Developer</span>, <span className="font-semibold">Blockchain Developer</span>, and <span className="font-semibold">AI Developer</span> with over <span className="font-semibold">three years of experience</span> building high-end, scalable applications.
+              I&apos;m a passionate and enthusiastic <span className="font-semibold">Fullstack Web Developer</span>, <span className="font-semibold">Mobile Developer</span>, <span className="font-semibold">Blockchain Developer</span>, and <span className="font-semibold">AI Developer</span> with over <span className="font-semibold">three years of experience</span> building high-end, scalable applications.
             </p>
             <p className="text-gray-300 mb-4 md:mb-5 text-xs md:text-sm lg:text-base">
-              I thrive in environments where I can solve complex problems, build meaningful solutions, and keep pushing the boundaries of what&apos;s possible with code.
+              I thrive in environments where I can solve complex problems, build meaningful solutions across web and mobile platforms, and keep pushing the boundaries of what&apos;s possible with code.
             </p>
 
             <div className="flex flex-wrap gap-2 md:gap-4">

@@ -1,12 +1,12 @@
 import { useState, useEffect, useRef } from "react";
 import { cn } from "@/lib/utils";
-import { Code, Database, Layers, PencilRuler, Braces, Cpu, Shield, Info } from "lucide-react";
+import { Code, Database, Layers, PencilRuler, Braces, Cpu, Shield, Info, Smartphone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion, useInView, AnimatePresence } from "framer-motion";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import { useIsMobile } from "@/hooks/use-mobile";
 
-type SkillCategory = "frontend" | "backend" | "blockchain" | "ai" | "tools" | "languages";
+type SkillCategory = "frontend" | "backend" | "blockchain" | "ai" | "tools" | "languages" | "mobile";
 
 interface SkillItem {
   name: string;
@@ -18,23 +18,23 @@ const CountUp = ({ end, duration = 2000 }: { end: number; duration?: number }) =
   const [count, setCount] = useState(0);
   const nodeRef = useRef(null);
   const isInView = useInView(nodeRef, { once: true, amount: 0.5 });
-  
+
   useEffect(() => {
     if (!isInView) return;
-    
+
     let start = 0;
     const increment = end / (duration / 16);
-    
+
     const timer = setInterval(() => {
       start += increment;
       setCount(Math.min(Math.floor(start), end));
-      
+
       if (start >= end) clearInterval(timer);
     }, 16);
-    
+
     return () => clearInterval(timer);
   }, [end, duration, isInView]);
-  
+
   return <span ref={nodeRef}>{count}</span>;
 };
 
@@ -43,7 +43,7 @@ const letterVariants = {
   visible: (i: number) => ({
     opacity: 1,
     y: 0,
-    transition: { 
+    transition: {
       delay: i * 0.05,
       duration: 0.5
     }
@@ -73,16 +73,17 @@ const Skills = () => {
   const skillsRef = useRef(null);
   const isInView = useInView(skillsRef, { once: true });
   const isMobile = useIsMobile();
-  
+
   const categories = [
     { id: "frontend", label: "Frontend", icon: <PencilRuler size={isMobile ? 16 : 20} /> },
     { id: "backend", label: "Backend", icon: <Database size={isMobile ? 16 : 20} /> },
+    { id: "mobile", label: "Mobile", icon: <Smartphone size={isMobile ? 16 : 20} /> },
     { id: "blockchain", label: "Blockchain", icon: <Layers size={isMobile ? 16 : 20} /> },
     { id: "ai", label: "AI", icon: <Cpu size={isMobile ? 16 : 20} /> },
     { id: "languages", label: "Languages", icon: <Braces size={isMobile ? 16 : 20} /> },
     { id: "tools", label: "Tools", icon: <Code size={isMobile ? 16 : 20} /> },
   ];
-  
+
   const skillsData: Record<SkillCategory, SkillItem[]> = {
     frontend: [
       { name: "React", level: 95, description: "A JavaScript library for building user interfaces with component-based architecture." },
@@ -142,6 +143,16 @@ const Skills = () => {
       { name: "Cursor AI", level: 85, description: "AI-powered code editor that helps developers write and understand code faster." },
       { name: "pnpm", level: 80, description: "Fast, disk space efficient package manager with strict dependency resolution." },
     ],
+    mobile: [
+      { name: "React Native", level: 85, description: "Framework for building native apps using React for iOS and Android platforms." },
+      { name: "Expo", level: 80, description: "Platform for making universal native apps for Android, iOS, and the web with JavaScript and React." },
+      { name: "React Navigation", level: 85, description: "Routing and navigation library for React Native applications." },
+      { name: "Native Base", level: 75, description: "Accessible, utility-first component library for React Native applications." },
+      { name: "Redux for Mobile", level: 80, description: "State management for React Native apps using the Redux architecture." },
+      { name: "Reanimated", level: 70, description: "React Native's Animated library reimplemented for better performance and developer experience." },
+      { name: "App Publishing", level: 75, description: "Experience with publishing apps to Google Play Store and Apple App Store." },
+      { name: "Mobile UX/UI", level: 80, description: "Designing and implementing intuitive mobile user interfaces for iOS and Android." },
+    ],
   };
 
   const container = {
@@ -163,24 +174,24 @@ const Skills = () => {
   return (
     <div className="container mx-auto px-4" ref={skillsRef}>
       <div className="max-w-5xl mx-auto">
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
           className="text-center mb-8 md:mb-12"
         >
-          <AnimatedTitle 
-            text="My Skills" 
-            className="text-2xl md:text-3xl lg:text-5xl font-bold mb-3 md:mb-4 font-display flex justify-center flex-wrap" 
+          <AnimatedTitle
+            text="My Skills"
+            className="text-2xl md:text-3xl lg:text-5xl font-bold mb-3 md:mb-4 font-display flex justify-center flex-wrap"
           />
           <div className="w-16 md:w-20 h-1 bg-gradient-to-r from-rose-500 to-rose-600 mx-auto mb-4"></div>
           <p className="text-gray-300 max-w-2xl mx-auto text-sm md:text-base px-2">
             I&apos;ve acquired a diverse set of skills over the years, allowing me to build complete solutions from frontend to backend, including blockchain and AI integration.
           </p>
         </motion.div>
-        
-        <motion.div 
+
+        <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
@@ -200,8 +211,8 @@ const Skills = () => {
                   onClick={() => setActiveCategory(category.id as SkillCategory)}
                   className={cn(
                     "mx-1 flex items-center gap-1.5 transition-all duration-300 text-xs md:text-sm",
-                    activeCategory === category.id 
-                      ? "bg-rose-900/20 text-rose-400 border-b-2 border-rose-500" 
+                    activeCategory === category.id
+                      ? "bg-rose-900/20 text-rose-400 border-b-2 border-rose-500"
                       : "text-gray-400 hover:text-white"
                   )}
                 >
@@ -212,9 +223,9 @@ const Skills = () => {
             ))}
           </div>
         </motion.div>
-        
+
         <TooltipProvider>
-          <motion.div 
+          <motion.div
             variants={container}
             initial="hidden"
             whileInView="show"
@@ -226,8 +237,8 @@ const Skills = () => {
                 <TooltipTrigger asChild>
                   <motion.div
                     variants={item}
-                    whileHover={{ 
-                      scale: 1.03, 
+                    whileHover={{
+                      scale: 1.03,
                       boxShadow: "0 10px 30px -15px rgba(244, 63, 94, 0.4)",
                     }}
                     className="relative bg-zinc-900/90 rounded-lg p-4 md:p-6 backdrop-blur-sm border border-rose-500/10 cursor-pointer group"

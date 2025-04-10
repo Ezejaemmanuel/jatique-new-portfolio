@@ -12,7 +12,7 @@ interface HeroProps {
 const Hero = ({ setActiveSection }: HeroProps) => {
   const [text, setText] = useState("");
   const [wordIndex, setWordIndex] = useState(0);
-  const words = ["Fullstack", "Blockchain", "AI"];
+  const words = ["Fullstack", "Mobile", "Blockchain", "AI"];
   const isMobile = useIsMobile();
 
   useEffect(() => {
@@ -129,8 +129,8 @@ const Hero = ({ setActiveSection }: HeroProps) => {
           className="text-base sm:text-lg text-gray-400 mb-6 sm:mb-8 max-w-xl mx-auto px-3"
         >
           {isMobile
-            ? "Building high-end, scalable web applications with modern technologies."
-            : "Building high-end, scalable web applications, smart contracts, and AI-powered solutions with modern technologies."
+            ? "Building high-end, scalable web and mobile applications with modern technologies."
+            : "Building high-end, scalable web and mobile applications, smart contracts, and AI-powered solutions with modern technologies."
           }
         </motion.p>
 

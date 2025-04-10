@@ -147,6 +147,21 @@ const Index = () => {
                     className="text-rose-400 font-semibold"
                   >
                     AI
+                  </motion.span>{" "}
+                  <motion.span
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ delay: 3.4, duration: 0.3 }}
+                  >
+                    |
+                  </motion.span>{" "}
+                  <motion.span
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ delay: 3.7, duration: 0.3 }}
+                    className="text-rose-400 font-semibold"
+                  >
+                    Mobile
                   </motion.span>
                 </motion.p>
                 <motion.p
@@ -166,7 +181,7 @@ const Index = () => {
                 transition={{ delay: 2.5, duration: 0.6 }}
                 className="flex flex-wrap justify-center mt-6 gap-2 px-4 max-w-xs md:max-w-md"
               >
-                {["React", "Next.js", "TypeScript", "Node.js", "Solidity", "Python"].map((tech, i) => (
+                {["React", "Next.js", "TypeScript", "Node.js", "Solidity", "Python", "React Native", "Expo"].map((tech, i) => (
                   <motion.span
                     key={tech}
                     initial={{ opacity: 0, scale: 0.8 }}

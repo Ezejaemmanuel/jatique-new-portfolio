@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 import { Calendar, Building2 } from "lucide-react";
 
@@ -7,23 +6,23 @@ const Experience = () => {
     {
       title: "Fullstack Web and Blockchain Developer",
       company: "For A startup",
-      date: "2024 - Present", 
+      date: "2024 - Present",
       description: "Developing blockchain solutions and smart contracts. Building decentralized applications with Web3 integration. Leading development of enterprise dApps.",
       technologies: ["Solidity", "Web3.js", "Ethereum", "Smart Contracts", "DeFi", "React", "Node.js"]
     },
     {
-      title: "FullStack Web and Ai developer", 
+      title: "FullStack Web and Mobile Developer",
       company: "Techbros",
       date: "2023 - 2024",
-      description: "Integrating LLM APIs into frontend applications. Building AI-powered chat interfaces and intelligent search features. Implementing real-time AI assistance in web applications.",
-      technologies: ["React", "TypeScript", "OpenAI API", "LangChain", "Next.js", "TailwindCSS", "Node.js"]
+      description: "Developing cross-platform mobile applications with React Native and Expo. Building responsive web applications with modern frameworks. Implementing mobile-first user experiences across platforms.",
+      technologies: ["React", "React Native", "Expo", "TypeScript", "Next.js", "TailwindCSS", "Node.js"]
     },
     {
-      title: "FullStack Web and Ai developer",
-      company: "Freelancing", 
+      title: "FullStack Web and Mobile Developer",
+      company: "Freelancing",
       date: "2022 - 2023",
-      description: "Developing web applications with integrated LLM capabilities. Creating conversational interfaces and AI-assisted content generation features. Building responsive frontends with AI functionalities.",
-      technologies: ["React", "OpenAI API", "Anthropic API", "Next.js", "TailwindCSS", "Node.js", "Express"]
+      description: "Creating native mobile applications for iOS and Android. Developing responsive web applications with integrated mobile experiences. Building cross-platform solutions using React Native and Expo.",
+      technologies: ["React", "React Native", "Expo", "Next.js", "TailwindCSS", "Node.js", "Express"]
     }
   ];
 
@@ -46,7 +45,7 @@ const Experience = () => {
   return (
     <div className="container mx-auto px-4 py-20">
       <div className="max-w-5xl mx-auto">
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
@@ -59,8 +58,8 @@ const Experience = () => {
             My professional journey in the tech industry and the companies I&apos;ve contributed to.
           </p>
         </motion.div>
-        
-        <motion.div 
+
+        <motion.div
           variants={container}
           initial="hidden"
           whileInView="show"
@@ -68,7 +67,7 @@ const Experience = () => {
           className="relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-rose-500 before:via-rose-700 before:to-rose-900 before:opacity-30"
         >
           {experiences.map((exp, index) => (
-            <motion.div 
+            <motion.div
               key={index}
               variants={item}
               className="relative flex items-start justify-between md:justify-normal md:odd:flex-row-reverse group mb-16 last:mb-0"
@@ -76,8 +75,8 @@ const Experience = () => {
               <div className="flex items-center justify-center w-10 h-10 rounded-full border border-white/10 bg-zinc-900 text-rose-500 shadow-md shadow-black/5 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
                 {index % 2 === 0 ? <Building2 className="w-5 h-5" /> : <Calendar className="w-5 h-5" />}
               </div>
-              
-              <motion.div 
+
+              <motion.div
                 initial={{ opacity: 0, scale: 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
@@ -98,8 +97,8 @@ const Experience = () => {
                   <p className="text-gray-300 mb-4">{exp.description}</p>
                   <div className="flex flex-wrap gap-2 mt-2">
                     {exp.technologies.map((tech, i) => (
-                      <span 
-                        key={i} 
+                      <span
+                        key={i}
                         className="px-2 py-1 text-xs rounded-full bg-rose-500/20 text-rose-300"
                       >
                         {tech}
