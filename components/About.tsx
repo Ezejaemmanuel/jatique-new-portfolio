@@ -72,11 +72,11 @@ const About = () => {
             </p>
             
             <div className="flex flex-wrap gap-2 md:gap-4">
-              <Button asChild variant="outline" className="text-xs md:text-sm border-rose-800/30 hover:bg-rose-900/20 transition-all duration-300 h-8 md:h-10">
+              {/* <Button asChild variant="outline" className="text-xs md:text-sm text-white border-rose-800/30 hover:bg-rose-900/20 transition-all duration-300 h-8 md:h-10">
                 <a href="#" download="resume.pdf">
                   Download Resume
                 </a>
-              </Button>
+              </Button> */}
               <Button asChild className="text-xs md:text-sm bg-gradient-to-r from-rose-600 to-rose-500 hover:from-rose-700 hover:to-rose-600 transition-all duration-300 h-8 md:h-10">
                 <a href="#contact">
                   Let&apos;s Talk

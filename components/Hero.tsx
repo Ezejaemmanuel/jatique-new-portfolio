@@ -139,11 +139,11 @@ const Hero = ({ setActiveSection }: HeroProps) => {
           className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4 mb-8 sm:mb-12 px-4"
         >
           <Button
-            onClick={() => scrollToSection("projects")}
+            onClick={() => scrollToSection("skills")}
             className="bg-gradient-to-r from-rose-600 to-rose-500 hover:from-rose-700 hover:to-rose-600 text-white"
             size={isMobile ? "default" : "lg"}
           >
-            View My Work
+            View My Skills
           </Button>
           <Button
             onClick={() => scrollToSection("contact")}
