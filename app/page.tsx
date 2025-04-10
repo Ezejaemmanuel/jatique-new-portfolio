@@ -19,7 +19,7 @@ const Index = () => {
     // Extended loading time to 4 seconds as requested
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 6000);
+    }, 4500);
 
     return () => clearTimeout(timer);
   }, []);
