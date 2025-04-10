@@ -149,7 +149,7 @@ const Hero = ({ setActiveSection }: HeroProps) => {
             onClick={() => scrollToSection("contact")}
             variant="outline"
             size={isMobile ? "default" : "lg"}
-            className="border-gray-600 text-gray-200 hover:bg-gray-800 mt-2 sm:mt-0"
+            className="border-gray-600 text-black hover:bg-gray-800 mt-2 sm:mt-0"
           >
             Get In Touch
           </Button>

@@ -1,14 +1,31 @@
-
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { useIsMobile } from "@/hooks/use-mobile";
+import Image from "next/image";
 
 const About = () => {
   const isMobile = useIsMobile();
-  
+
+  // Animation for letters
+  const letterAnimation = {
+    hidden: { opacity: 0, y: 5 },
+    visible: (i: number) => ({
+      opacity: 1,
+      y: 0,
+      transition: {
+        delay: 0.7 + i * 0.1,
+        duration: 0.3,
+        ease: "easeOut"
+      }
+    })
+  };
+
+  // Split "Jatique" into individual letters for animation
+  const letters = "Jatique".split("");
+
   return (
     <div className="container mx-auto px-4">
-      <motion.div 
+      <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.6 }}
@@ -19,9 +36,9 @@ const About = () => {
           <h2 className="text-2xl md:text-3xl lg:text-5xl font-bold mb-3 md:mb-4 font-display">About Me</h2>
           <div className="w-16 md:w-20 h-1 bg-gradient-to-r from-rose-500 to-rose-600 mx-auto"></div>
         </div>
-        
+
         <div className="flex flex-col md:flex-row gap-6 md:gap-8 lg:gap-12 items-center">
-          <motion.div 
+          <motion.div
             initial={{ x: -50, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.2 }}
@@ -29,29 +46,49 @@ const About = () => {
             className="w-full md:w-2/5"
           >
             <div className="relative">
-              <motion.div 
-                className="aspect-square rounded-2xl bg-gradient-to-br from-rose-600 to-rose-400 overflow-hidden shadow-xl"
+              <motion.div
+                className="aspect-square rounded-2xl overflow-hidden shadow-xl"
                 whileHover={{ scale: 1.03 }}
                 transition={{ duration: 0.3 }}
               >
-                {/* This would be where your image goes */}
-                <div className="w-full h-full bg-black/40 backdrop-blur-sm flex items-center justify-center text-white text-4xl md:text-5xl font-bold font-display">
-                  J
-                </div>
+                <Image
+                  src="https://jwhzs4mj71.ufs.sh/f/ZdXbAB3jlHwtvAIY7XdDhKegd50Sso4EYkHC3tyIq6QO8jBf"
+                  alt="Ezeja Emmanuel Chibuike"
+                  width={500}
+                  height={500}
+                  className="object-cover w-full h-full"
+                />
               </motion.div>
-              <motion.div 
+              <motion.div
                 initial={{ opacity: 0, scale: 0.5 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ delay: 0.5, duration: 0.4 }}
                 viewport={{ once: true }}
-                className="absolute -bottom-4 -right-4 w-14 md:w-16 lg:w-24 h-14 md:h-16 lg:h-24 rounded-xl bg-black border-4 border-rose-500/20"
-                animate={{ rotate: [0, 5, 0, -5, 0] }}
-                // Removing the duplicate transition prop that was causing the error
-              ></motion.div>
+                className="absolute -bottom-4 -right-4 w-14 md:w-16 lg:w-24 h-14 md:h-16 lg:h-24 rounded-xl bg-gradient-to-br from-black to-gray-900 border-4 border-rose-500/20 flex items-center justify-center overflow-hidden"
+                whileHover={{ scale: 1.05 }}
+              >
+                <div className="flex">
+                  {letters.map((letter, i) => (
+                    <motion.span
+                      key={i}
+                      custom={i}
+                      variants={letterAnimation}
+                      initial="hidden"
+                      whileInView="visible"
+                      viewport={{ once: true }}
+                      className={`text-xs md:text-sm lg:text-xl font-bold ${i % 2 === 0 ? "text-rose-400" : "text-white"
+                        }`}
+                      style={{ display: "inline-block" }}
+                    >
+                      {letter}
+                    </motion.span>
+                  ))}
+                </div>
+              </motion.div>
             </div>
           </motion.div>
-          
-          <motion.div 
+
+          <motion.div
             initial={{ x: 50, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.4 }}
@@ -70,7 +107,7 @@ const About = () => {
             <p className="text-gray-300 mb-4 md:mb-5 text-xs md:text-sm lg:text-base">
               I thrive in environments where I can solve complex problems, build meaningful solutions, and keep pushing the boundaries of what&apos;s possible with code.
             </p>
-            
+
             <div className="flex flex-wrap gap-2 md:gap-4">
               {/* <Button asChild variant="outline" className="text-xs md:text-sm text-white border-rose-800/30 hover:bg-rose-900/20 transition-all duration-300 h-8 md:h-10">
                 <a href="#" download="resume.pdf">
