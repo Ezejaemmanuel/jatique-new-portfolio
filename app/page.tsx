@@ -232,9 +232,9 @@ const Index = () => {
             <Skills />
           </section>
 
-          <section id="projects" className="min-h-screen py-20">
+          {/* <section id="projects" className="min-h-screen py-20">
             <Projects />
-          </section>
+          </section> */}
 
           <section id="contact" className="min-h-screen py-20 bg-black/90">
             <Contact />

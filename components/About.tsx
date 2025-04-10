@@ -59,16 +59,16 @@ const About = () => {
             className="w-full md:w-3/5"
           >
             <h3 className="text-lg md:text-xl lg:text-2xl font-bold mb-2 md:mb-4 font-display">
-              Hi, I'm <span className="text-rose-400">Ezeja Emmanuel Chibuike</span>
+              Hi, I&apos;m <span className="text-rose-400">Ezeja Emmanuel Chibuike</span>
             </h3>
             <p className="text-gray-300 mb-2 md:mb-3 text-xs md:text-sm lg:text-base">
-              I go by <span className="font-semibold">Jatique</span> (/jatik/) — that's the name I love to be called.
+              I go by <span className="font-semibold">Jatique</span> (/jatik/) — that&apos;s the name I love to be called.
             </p>
             <p className="text-gray-300 mb-2 md:mb-3 text-xs md:text-sm lg:text-base">
-              I'm a passionate and enthusiastic <span className="font-semibold">Fullstack Web Developer</span>, <span className="font-semibold">Blockchain Developer</span>, and <span className="font-semibold">AI Developer</span> with over <span className="font-semibold">three years of experience</span> building high-end, scalable applications.
+              I&apos;m a passionate and enthusiastic <span className="font-semibold">Fullstack Web Developer</span>, <span className="font-semibold">Blockchain Developer</span>, and <span className="font-semibold">AI Developer</span> with over <span className="font-semibold">three years of experience</span> building high-end, scalable applications.
             </p>
             <p className="text-gray-300 mb-4 md:mb-5 text-xs md:text-sm lg:text-base">
-              I thrive in environments where I can solve complex problems, build meaningful solutions, and keep pushing the boundaries of what's possible with code.
+              I thrive in environments where I can solve complex problems, build meaningful solutions, and keep pushing the boundaries of what&apos;s possible with code.
             </p>
             
             <div className="flex flex-wrap gap-2 md:gap-4">
@@ -79,7 +79,7 @@ const About = () => {
               </Button>
               <Button asChild className="text-xs md:text-sm bg-gradient-to-r from-rose-600 to-rose-500 hover:from-rose-700 hover:to-rose-600 transition-all duration-300 h-8 md:h-10">
                 <a href="#contact">
-                  Let's Talk
+                  Let&apos;s Talk
                 </a>
               </Button>
             </div>

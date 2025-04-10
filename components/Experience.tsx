@@ -5,25 +5,25 @@ import { Calendar, Building2 } from "lucide-react";
 const Experience = () => {
   const experiences = [
     {
-      title: "Senior Fullstack Developer",
-      company: "Tech Innovations Ltd",
-      date: "2023 - Present",
-      description: "Leading development of enterprise web applications and blockchain solutions. Mentoring junior developers and implementing CI/CD pipelines.",
-      technologies: ["React", "TypeScript", "Node.js", "Solidity", "AWS"]
+      title: "Fullstack Web and Blockchain Developer",
+      company: "For A startup",
+      date: "2024 - Present", 
+      description: "Developing blockchain solutions and smart contracts. Building decentralized applications with Web3 integration. Leading development of enterprise dApps.",
+      technologies: ["Solidity", "Web3.js", "Ethereum", "Smart Contracts", "DeFi", "React", "Node.js"]
     },
     {
-      title: "Blockchain Developer",
-      company: "Web3 Solutions",
+      title: "FullStack Web and Ai developer", 
+      company: "Techbros",
+      date: "2023 - 2024",
+      description: "Integrating LLM APIs into frontend applications. Building AI-powered chat interfaces and intelligent search features. Implementing real-time AI assistance in web applications.",
+      technologies: ["React", "TypeScript", "OpenAI API", "LangChain", "Next.js", "TailwindCSS", "Node.js"]
+    },
+    {
+      title: "FullStack Web and Ai developer",
+      company: "Freelancing", 
       date: "2022 - 2023",
-      description: "Built decentralized applications and smart contracts for various clients. Implemented token standards and DeFi protocols.",
-      technologies: ["Solidity", "Web3.js", "React", "Hardhat", "DApps"]
-    },
-    {
-      title: "Frontend Developer",
-      company: "Creative Digital Agency",
-      date: "2020 - 2022",
-      description: "Developed responsive web applications with modern JavaScript frameworks. Collaborated with designers to implement pixel-perfect UIs.",
-      technologies: ["React", "JavaScript", "Tailwind CSS", "Redux", "Next.js"]
+      description: "Developing web applications with integrated LLM capabilities. Creating conversational interfaces and AI-assisted content generation features. Building responsive frontends with AI functionalities.",
+      technologies: ["React", "OpenAI API", "Anthropic API", "Next.js", "TailwindCSS", "Node.js", "Express"]
     }
   ];
 
@@ -56,7 +56,7 @@ const Experience = () => {
           <h2 className="text-3xl md:text-5xl font-bold mb-4 font-display">Work Experience</h2>
           <div className="w-20 h-1 bg-gradient-to-r from-rose-500 to-rose-600 mx-auto mb-4"></div>
           <p className="text-gray-300 max-w-2xl mx-auto">
-            My professional journey in the tech industry and the companies I've contributed to.
+            My professional journey in the tech industry and the companies I&apos;ve contributed to.
           </p>
         </motion.div>
         

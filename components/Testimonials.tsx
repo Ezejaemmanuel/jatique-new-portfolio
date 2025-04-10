@@ -75,7 +75,7 @@ const Testimonials = () => {
               </div>
               
               <div className="flex-1">
-                <p className="text-gray-200 text-lg md:text-xl italic mb-6">"{testimonials[current].content}"</p>
+                <p className="text-gray-200 text-lg md:text-xl italic mb-6">{testimonials[current].content}</p>
                 <div>
                   <h4 className="font-bold text-white font-display">{testimonials[current].author}</h4>
                   <p className="text-rose-400">{testimonials[current].position}</p>

@@ -19,19 +19,23 @@ const DetailedAbout = () => {
     {
       category: "Blockchain",
       icon: <Cpu className="text-blue-400" />,
-      items: ["Solidity", "Ethers.js", "Hardhat", "IPFS", "The Graph"]
+      items: ["Solidity", "Ethers.js", "Hardhat", "IPFS", "The Graph","Wagmi/Viem"]
     },
     {
       category: "AI & ML",
       icon: <Terminal className="text-green-400" />,
-      items: ["Python", "TensorFlow", "PyTorch", "LangChain", "HuggingFace"]
+      items: ["Python",  "LangChain", "HuggingFace","Fastapi"]
     },
   ];
-
   // Array of personal values
   const values = [
     {
-      title: "Attention to Detail",
+      title: "Adaptability",
+      description: "I embrace new technologies and leverage AI tools to write more efficient, effective, and high-quality code at an accelerated pace.",
+      icon: <Terminal />
+    },
+    {
+      title: "Attention to Detail", 
       description: "I believe the small details make a big difference in the quality of the final product.",
       icon: <Code />
     },
@@ -49,7 +53,12 @@ const DetailedAbout = () => {
       title: "Quality & Excellence",
       description: "I don't just deliver code that works — I deliver code that's maintainable and performant.",
       icon: <CheckCircle />
-    }
+    },
+    {
+      title: "Future Growth",
+      description: "I'm excited about the endless possibilities ahead and committed to growing both personally and professionally in this ever-evolving tech landscape.",
+      icon: <Terminal />
+    },
   ];
 
   return (
@@ -90,12 +99,12 @@ const DetailedAbout = () => {
               </p>
               
               <p>
-                Whether I'm building decentralized applications that leverage the security and transparency of blockchain, creating AI-powered tools that automate complex processes, or designing responsive web interfaces that delight users, I approach each challenge with excitement and dedication.
+                Whether I&apos;m building decentralized applications that leverage the security and transparency of blockchain, creating AI-powered tools that automate complex processes, or designing responsive web interfaces that delight users, I approach each challenge with excitement and dedication.
               </p>
               
               <div className="pt-4">
                 <Button asChild className="bg-gradient-to-r from-rose-600 to-orange-600 hover:from-rose-700 hover:to-orange-700 text-white text-xs md:text-base font-medium py-2 md:py-6 px-4 md:px-8 h-auto">
-                  <a href="#contact">Let's Create Something Amazing</a>
+                  <a href="#contact">Let&apos;s Create Something Amazing</a>
                 </Button>
               </div>
             </div>

@@ -89,27 +89,32 @@ const Skills = () => {
       { name: "Next.js", level: 90, description: "React framework for production with server-side rendering and static site generation." },
       { name: "TypeScript", level: 85, description: "JavaScript with syntax for types, enhancing code quality and developer experience." },
       { name: "Tailwind CSS", level: 90, description: "Utility-first CSS framework for rapidly building custom user interfaces." },
+      { name: "Bootstrap", level: 85, description: "Popular CSS framework with pre-built components and responsive grid system." },
       { name: "Redux", level: 85, description: "Predictable state container for JavaScript apps with a centralized store." },
-      { name: "Zustand", level: 80, description: "Small, fast and scalable state-management solution using simplified flux principles." },
-      { name: "TanStack Query", level: 88, description: "Powerful data fetching library for React that handles caching, background updates and stale data." },
+      { name: "Zustand", level: 95, description: "Small, fast and scalable state-management solution using simplified flux principles." },
+      { name: "TanStack Query", level: 91, description: "Powerful data fetching library for React that handles caching, background updates and stale data." },
     ],
     backend: [
       { name: "Node.js", level: 85, description: "JavaScript runtime built on Chrome's V8 JavaScript engine for server-side development." },
-      { name: "Express.js", level: 85, description: "Fast, unopinionated, minimalist web framework for Node.js applications." },
-      { name: "Hono.js", level: 80, description: "Small, simple, and ultrafast web framework for the Edges." },
-      { name: "tRPC", level: 75, description: "End-to-end typesafe APIs made easy, enabling you to build fully typed APIs without schemas or code generation." },
+      { name: "Express.js", level: 70, description: "Fast, unopinionated, minimalist web framework for Node.js applications." },
+      { name: "Hono.js", level: 75, description: "Small, simple, and ultrafast web framework for the Edges." },
+      { name: "FastAPI", level: 70, description: "Modern, fast web framework for building APIs with Python based on standard Python type hints." },
+      { name: "Next.js", level: 90, description: "Full-stack React framework with hybrid static & server rendering, TypeScript support, and route pre-fetching." },
       { name: "Prisma", level: 85, description: "Next-generation ORM for Node.js and TypeScript with type-safety and auto-completion." },
-      { name: "PostgreSQL", level: 80, description: "Powerful, open source object-relational database system with reliability and data integrity." },
-      { name: "TanStack Router", level: 78, description: "Modern, type-safe router for React with first-class search params and nested routes." },
+      { name: "Drizzle", level: 90, description: "TypeScript ORM that's lightweight and performant with a focus on developer experience." },
+      { name: "PostgreSQL", level: 90, description: "Powerful, open source object-relational database system with reliability and data integrity." },
     ],
     blockchain: [
       { name: "Solidity", level: 80, description: "Object-oriented, high-level language for implementing smart contracts on Ethereum." },
-      { name: "Web3.js", level: 75, description: "Collection of libraries that allow you to interact with Ethereum nodes and smart contracts." },
+      { name: "Wagmi", level: 85, description: "Collection of React Hooks for Ethereum, making it easy to interact with wallets and smart contracts." },
+      { name: "Viem", level: 80, description: "TypeScript interface for Ethereum, providing low-level primitives for interacting with the blockchain." },
       { name: "Ethers.js", level: 75, description: "Complete and compact library for interacting with the Ethereum Blockchain and its ecosystem." },
       { name: "Hardhat", level: 70, description: "Development environment to compile, deploy, test, and debug Ethereum software." },
+      { name: "Foundry", level: 89, description: "Blazing fast, portable and modular toolkit for Ethereum application development written in Rust." },
       { name: "Smart Contracts", level: 75, description: "Self-executing contracts with the terms directly written into code." },
       { name: "DApps", level: 70, description: "Decentralized applications that run on a blockchain or P2P network of computers." },
       { name: "Web3 Security Auditing", level: 30, description: "Analyzing smart contracts for vulnerabilities and security threats." },
+      { name: "thirdweb", level: 70, description: "Complete web3 development framework for building web3 apps, games and NFT projects." }
     ],
     ai: [
       { name: "LangChain", level: 70, description: "Framework for developing applications powered by language models with chains for complex reasoning." },
@@ -117,6 +122,9 @@ const Skills = () => {
       { name: "Vercel AI SDK", level: 70, description: "Library for building AI-powered user interfaces with streaming and edge capabilities." },
       { name: "AI Chatbots", level: 65, description: "Creating conversational interfaces powered by machine learning algorithms." },
       { name: "Prompt Engineering", level: 75, description: "Crafting effective prompts to guide AI models toward desired outputs." },
+      { name: "Vector Databases", level: 70, description: "Using databases like Pinecone and Weaviate for AI-powered similarity search." },
+      { name: "AI Agents", level: 80, description: "Building autonomous AI agents that can perform complex tasks and reasoning." },
+      { name: "RAG Systems", level: 70, description: "Implementing Retrieval Augmented Generation for enhanced AI responses with external data." },
     ],
     languages: [
       { name: "TypeScript", level: 90, description: "Strongly typed programming language that builds on JavaScript with type safety." },
@@ -131,7 +139,8 @@ const Skills = () => {
       { name: "Vercel", level: 85, description: "Platform for frontend frameworks and static sites, built to integrate with headless content, commerce, or database." },
       { name: "VS Code", level: 95, description: "Lightweight but powerful source code editor with built-in support for JavaScript, TypeScript and Node.js." },
       { name: "Figma", level: 70, description: "Cloud-based design tool for collaborative interface design with real-time collaboration." },
-      { name: "TanStack Table", level: 82, description: "Headless UI for building powerful tables and datagrids with flexibility and control." },
+      { name: "Cursor AI", level: 85, description: "AI-powered code editor that helps developers write and understand code faster." },
+      { name: "pnpm", level: 80, description: "Fast, disk space efficient package manager with strict dependency resolution." },
     ],
   };
 
@@ -167,7 +176,7 @@ const Skills = () => {
           />
           <div className="w-16 md:w-20 h-1 bg-gradient-to-r from-rose-500 to-rose-600 mx-auto mb-4"></div>
           <p className="text-gray-300 max-w-2xl mx-auto text-sm md:text-base px-2">
-            I've acquired a diverse set of skills over the years, allowing me to build complete solutions from frontend to backend, including blockchain and AI integration.
+            I&apos;ve acquired a diverse set of skills over the years, allowing me to build complete solutions from frontend to backend, including blockchain and AI integration.
           </p>
         </motion.div>
         

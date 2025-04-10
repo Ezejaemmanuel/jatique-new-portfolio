@@ -58,7 +58,7 @@ const Publications = () => {
           <h2 className="text-3xl md:text-5xl font-bold mb-4 font-display">Publications</h2>
           <div className="w-20 h-1 bg-gradient-to-r from-orange-500 to-rose-500 mx-auto mb-4"></div>
           <p className="text-gray-300 max-w-2xl mx-auto">
-            Selected research papers and articles I've authored or co-authored in the fields of blockchain, AI, and web development.
+            Selected research papers and articles I&apos;ve authored or co-authored in the fields of blockchain, AI, and web development.
           </p>
         </motion.div>
 

@@ -211,7 +211,7 @@ const Projects = () => {
             size="default"
             className="bg-gradient-to-r from-orange-600 to-rose-600 hover:from-orange-700 hover:to-rose-700 text-white font-medium px-6 md:px-10 py-2 md:py-7 h-auto text-sm md:text-base shadow-lg shadow-orange-900/20"
           >
-            <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 md:gap-3">
+            <a href="https://github.com/Ezejaemmanuel" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 md:gap-3">
               <Github size={18} />
               View All Projects on GitHub
             </a>
